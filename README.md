@@ -3,6 +3,8 @@ Lightbox
 
 ------------------- JS ------------------------
 
+
+
 var data , data_type, data_size,  data_refresh;
 		
 jQuery(document).ready(function($) {
@@ -91,6 +93,79 @@ jQuery(document).ready(function($) {
  
 });
 
+
+
 --------------------------------- HTML -------------------------------
 
+
+
 <a href="#" class="lightbox_trigger" data-type="iframe" data-refresh="true" data-size="450x200"> OBJET-LIEN </a>
+
+
+
+--------------------------------- CSS ---------------------------------
+
+
+
+@charset "UTF-8";
+/* CSS Document */
+
+body.popup {
+	background-image: none;
+	background-color: #FFFBEF;
+}
+
+#lightbox {
+    position:fixed; /* keeps the lightbox window in the current viewport */
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+	background-color:rgba(0,0,0,0.5);
+	display:block;
+    text-align:center;
+	z-index: 10000;
+}
+
+#lightbox-box {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+    box-shadow:0 0 10px #666666;
+    -webkit-box-shadow:0 0 10px #666666;
+    -moz-box-shadow:0 0 10px  #666666;
+	padding:5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+#lightbox- img {
+}
+
+/* Personalised configuration */
+
+#lightbox-box {
+	background-repeat:repeat-x;
+	background-color:#FFFBEF;
+}
+
+.lightbox-close, .lightbox-close:hover {
+	margin-top:5px;
+	margin-right:5px;
+	float:right;
+}
+
+#content-lightbox {
+	background-color: #FFFBEF;
+	text-align: justify;
+	width: 425px;
+	position:inherit;
+	padding: 15px 5px 5px 5px;
+}
+#content-lightbox p  {
+	 margin: 0 !important;
+}	
+
+a.lightbox_trigger {
+	color: #9CC11C !important;
+}
